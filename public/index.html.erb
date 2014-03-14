@@ -33,7 +33,7 @@
   <dl>
     <%[Item.new("Channa Masala", 5.95, "Yummy goodness", "public/images/food1.jpg"), Item.new("Chicken Tikka Masala", 5.95, "Yummy goodness", "public/images/food2.jpg")].each do |item| %>
     <dt><%=Channa Masala %</dt> - <%= 5.95 %></dt>
-    <dd><%=Yummy goodness %><img src=<%=item.image %>></dd>
+    <dd><%=Yummy goodness %><img src="<%=item.image %>></dd>
       <% end %>
     </dl>
     
