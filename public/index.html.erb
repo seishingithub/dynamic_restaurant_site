@@ -30,15 +30,11 @@
   </p>
   <img src="/images/food1.jpg">
 
-  <dl>
-    <%[Item.new("Channa Masala", 5.95, "Yummy goodness", "public/images/food1.jpg"), Item.new("Chicken Tikka Masala", 5.95, "Yummy goodness", "public/images/food2.jpg")].each do |item| %>
-    <dt><%=Channa Masala %</dt> - <%= 5.95 %></dt>
-    <dd><%=Yummy goodness %><img src="<%=item.image %>></dd>
-      <% end %>
-    </dl>
-    
-    <dt>Chicken Tikka Masala - 5.95</dt>
-    <dd>Yummy goodness</dd>
+  <dl> <!-- Item.new is calling the initialize method on class Item -->
+    <%[Item.new("Channa Masala", 5.95, "Yummy goodness", "public/images/food1.jpg"), Item.new("Chicken Tikka Masala", 5.95, "Yummy goodness", "public/images/food2.jpg"), Item.new("Saag Paneer", 5.95, "Yummy goodness", "public/images/food3.jpg"), Item.new("Alu Gobi", 5.95, "Yummy goodness", "public/images/food4.jpg")].each do |this_item| %>
+    <dt><%= this_item.name %></dt> - <%= this_item.price %></dt>
+    <dd><%= this_item.description %><img_src="<%= this_item.image %>"></dd>
+    <% end %>
   </dl>
 </main>
 
